@@ -75,11 +75,11 @@ h1 {
 }
 
 /* CV link */
-.nav-links a[href$="CV_Mattinen.pdf"]:not(.active):hover::after {
+.nav-links a[href$="CV.pdf"]:not(.active):hover::after {
   content: '🂢';
   transform: translateY(-50%);
 }
-.nav-links a[href$="CV_Mattinen.pdf"].active::after {
+.nav-links a[href$="CV.pdf"].active::after {
   content: '🂢';
   transform: translateY(-50%);
 }
