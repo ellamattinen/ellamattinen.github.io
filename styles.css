@@ -58,7 +58,7 @@ h1 {
   position: absolute;
   left: 0.1em;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-50%) rotateY(180deg);
   font-size: 1.2em;
   color: #111;
   transition: transform 0.3s ease-out;
@@ -67,7 +67,7 @@ h1 {
 /* Home link */
 .nav-links a[href="index.html"]:not(.active):hover::after {
   content: '🂱';
-  transform: translateY(-50%) rotateY(180deg);
+  transform: translateY(-50%);
 }
 .nav-links a[href="index.html"].active::after {
   content: '🂱';
@@ -77,7 +77,7 @@ h1 {
 /* CV link */
 .nav-links a[href$="CV_Mattinen.pdf"]:not(.active):hover::after {
   content: '🂢';
-  transform: translateY(-50%) rotateY(180deg);
+  transform: translateY(-50%);
 }
 .nav-links a[href$="CV_Mattinen.pdf"].active::after {
   content: '🂢';
@@ -87,7 +87,7 @@ h1 {
 /* Research link */
 .nav-links a[href="research.html"]:not(.active):hover::after {
   content: '🂣';
-  transform: translateY(-50%) rotateY(180deg);
+  transform: translateY(-50%);
 }
 .nav-links a[href="research.html"].active::after {
   content: '🂣';
