@@ -1,32 +1,46 @@
-/* Reset */
+/* Reset & base */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html, body {
-  font-family: Georgia, "Times New Roman", serif;
+body {
+  font-family: "Times New Roman", Georgia, serif;
   background-color: #fffdfa;
-  color: #222;
-  line-height: 1.6;
+  color: #111;
   font-size: 18px;
-  -webkit-font-smoothing: antialiased;
+  line-height: 1.6;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
 }
 
-/* Layout */
-.page {
-  max-width: 720px;
-  margin: 80px auto;
-  padding: 0 20px;
-  text-align: left;
+.wrapper {
+  max-width: 800px;
+  width: 100%;
 }
 
-/* Headings */
+/* Header layout */
+.top {
+  display: flex;
+  align-items: flex-start;
+  gap: 25px;
+  margin-bottom: 50px;
+}
+
+.photo {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
 h1 {
-  font-size: 36px;
-  margin-top: 20px;
-  margin-bottom: 10px;
+  font-size: 32px;
+  margin-bottom: 8px;
+  font-weight: normal;
 }
 
 h2 {
@@ -36,14 +50,12 @@ h2 {
   font-weight: normal;
 }
 
-/* Text blocks */
 p {
-  margin-bottom: 18px;
+  margin-bottom: 14px;
 }
 
-/* Links */
 a {
-  color: #0066cc;
+  color: #ff3b89; /* pink link */
   text-decoration: none;
 }
 
@@ -51,53 +63,28 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Profile photo */
-.profile-photo {
-  display: block;
-  width: 180px;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 50%;
-  margin: 0 auto 20px auto;
-}
-
-/* Contact and CV */
-.affiliation {
-  text-align: center;
-  margin-bottom: 30px;
-  font-size: 17px;
-  color: #333;
-}
-
-.cv-link {
-  text-align: center;
-  margin-bottom: 50px;
-}
-
-.cv-link a {
-  color: #0066cc;
-  font-size: 20px;
-  text-decoration: underline;
+/* Make CV link inline like Danny Yagan's */
+.top p:last-child {
+  margin-top: 6px;
 }
 
 /* Responsive */
 @media (max-width: 600px) {
   body {
-    font-size: 16px;
+    padding: 40px 15px;
   }
-
-  .page {
-    margin: 40px auto;
+  .top {
+    flex-direction: column;
+    align-items: flex-start;
   }
-
+  .photo {
+    width: 100px;
+    height: 100px;
+  }
   h1 {
-    font-size: 30px;
-  }
-
-  .profile-photo {
-    width: 150px;
-    height: 150px;
+    font-size: 28px;
   }
 }
+
 
 
