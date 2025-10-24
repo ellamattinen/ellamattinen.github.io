@@ -29,14 +29,14 @@ body {
 
 h1 {
   font-size: 2.5rem;
-  margin: 0.25rem 0;
+  margin: 0.25rem 0 0.1rem;
   line-height: 1.1;
   font-weight: normal;
 }
 
 .institution {
-  font-size: 1.2rem;
-  margin: 0.5rem 0 1rem;
+  font-size: 1rem;
+  margin: 0 0 1rem;
   color: #333;
 }
 
@@ -50,44 +50,48 @@ h1 {
   color: #111;
   text-decoration: none;
   position: relative;
+  padding-left: 1.2em;
 }
 
 .nav-links a::after {
   content: '🂠';
   position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: -1.2em;
-  font-size: 0.9em;
+  left: 0.1em;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.2em;
   color: #111;
   transition: transform 0.3s ease-out;
 }
 
 /* Home link */
-.nav-links a[href="index.html"]:hover::after {
+.nav-links a[href="index.html"]:not(.active):hover::after {
   content: '🂱';
-  transform: translateX(-50%) rotateY(180deg);
+  transform: translateY(-50%) rotateY(180deg);
 }
 .nav-links a[href="index.html"].active::after {
   content: '🂱';
+  transform: translateY(-50%);
 }
 
 /* CV link */
-.nav-links a[href$="CV_Mattinen.pdf"]:hover::after {
+.nav-links a[href$="CV_Mattinen.pdf"]:not(.active):hover::after {
   content: '🂢';
-  transform: translateX(-50%) rotateY(180deg);
+  transform: translateY(-50%) rotateY(180deg);
 }
 .nav-links a[href$="CV_Mattinen.pdf"].active::after {
   content: '🂢';
+  transform: translateY(-50%);
 }
 
 /* Research link */
-.nav-links a[href="research.html"]:hover::after {
+.nav-links a[href="research.html"]:not(.active):hover::after {
   content: '🂣';
-  transform: translateX(-50%) rotateY(180deg);
+  transform: translateY(-50%) rotateY(180deg);
 }
 .nav-links a[href="research.html"].active::after {
   content: '🂣';
+  transform: translateY(-50%);
 }
 
 
