@@ -1,155 +1,103 @@
-/* Reset & base styles */
-body {
-  overflow-x: hidden;
-}
-
-
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html {
-  height: auto;
-  min-height: 100%;
-}
-
-
-body, html {
-  height: 100%;
-  font-family: sans-serif;
-  margin: 0
+html, body {
+  font-family: Georgia, "Times New Roman", serif;
+  background-color: #fffdfa;
+  color: #222;
+  line-height: 1.6;
+  font-size: 18px;
+  -webkit-font-smoothing: antialiased;
 }
 
 /* Layout */
-.container {
-  display: flex;
-  min-height: 100vh;
+.page {
+  max-width: 720px;
+  margin: 80px auto;
+  padding: 0 20px;
+  text-align: left;
 }
 
-
-/* Sidebar */
-.sidebar {
-  width: 400px;
-  background-color: #111111;
-  color: #fffbfb;
-  padding: 40px;
-  flex-shrink: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-
-.sidebar ul li a[href$=".pdf"] {
-  font-size: 26px;
-  color: #fffbfb; 
-  text-decoration: underline;
-}
-
-.sidebar h2 {
-  margin-bottom: 20px;
-  font-size: 44px;
-}
-
-.sidebar ul {
-  list-style: none;
-}
-
-.sidebar ul li {
+/* Headings */
+h1 {
+  font-size: 36px;
+  margin-top: 20px;
   margin-bottom: 10px;
 }
 
-.sidebar ul li a {
-  color: #fffbfb;
+h2 {
+  font-size: 22px;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  font-weight: normal;
+}
+
+/* Text blocks */
+p {
+  margin-bottom: 18px;
+}
+
+/* Links */
+a {
+  color: #0066cc;
   text-decoration: none;
 }
 
-.sidebar ul li a:hover {
+a:hover {
   text-decoration: underline;
 }
 
-.sidebar-image {
-  width: 90%;            
-  height: 350px;    
-  object-fit: cover; 
-  object-position: bottom;
-  border-radius: 8px;      
-  margin-bottom: 20px;
+/* Profile photo */
+.profile-photo {
   display: block;
-   margin-left: auto;
-  margin-right: auto;
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 0 auto 20px auto;
 }
 
-
-
-/* Main Content */
-.content {
-  flex-grow: 1;
-  padding: 80px 100px;
-  background-color: #fffbfb;
-  color: #111111;
+/* Contact and CV */
+.affiliation {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 17px;
+  color: #333;
 }
 
+.cv-link {
+  text-align: center;
+  margin-bottom: 50px;
+}
 
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-  }
+.cv-link a {
+  color: #0066cc;
+  font-size: 20px;
+  text-decoration: underline;
+}
 
-  .sidebar {
-    width: 100%;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;         /* Stack content vertically */
-    align-items: center;
-    text-align: center;
-  }
-
-  .sidebar-image {
-    max-width: 60%;
-    max-height: 280px; 
-    object-fit: cover; 
-  object-position: bottom;
-    margin-bottom: 10px;
-  }
-
-  .sidebar h2 {
-    margin-bottom: 15px;
-    font-size: 20px;
-  }
-
-  .sidebar ul {
-    display: flex;
-    flex-direction: column;        /* Stack links vertically */
-    align-items: center;
-    gap: 10px;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-  }
-
-  .sidebar ul li {
-    margin: 0;
-  }
-
-  .sidebar ul li a {
+/* Responsive */
+@media (max-width: 600px) {
+  body {
     font-size: 16px;
   }
 
-  .content {
-    padding: 20px;
+  .page {
+    margin: 40px auto;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  .profile-photo {
+    width: 150px;
+    height: 150px;
   }
 }
 
-.content a {
-  color: #ff3b89;
-  text-decoration: underline;
-}
-
-
-.content a:hover {
-  color: #90525f;
-}
 
