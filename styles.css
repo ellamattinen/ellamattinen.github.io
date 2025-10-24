@@ -119,7 +119,7 @@ h1 {
 
 .photo {
   width: 240px;
-  height: 360px;
+  height: 340px;
   object-fit: cover;
   border-radius: 8px;
   flex-shrink: 0;
