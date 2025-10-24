@@ -112,7 +112,7 @@ h1 {
 
 .profile-section {
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
   align-items: flex-start;
   margin-bottom: 2rem;
 }
