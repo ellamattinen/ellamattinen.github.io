@@ -15,7 +15,7 @@
       <p class="institution">Tampere University</p>
       <nav class="nav-links">
         <a href="index.html">Home</a>
-        <a href="CV.pdf" target="_blank">CV</a>
+        <a href="cv.html" target="_blank">CV</a>
         <a href="research.html" class="active">Research</a>
       </nav>
     </header>
@@ -45,5 +45,41 @@
 
     </div>
   </main>
+ 
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const links = document.querySelectorAll(".nav-links a");
+    const current = window.location.pathname.split("/").pop();
+
+    // Reset and mark the current link as active
+    links.forEach(link => {
+      const href = link.getAttribute("href");
+      if (href === current) {
+        link.classList.add("active");
+      } else {
+        link.classList.remove("active");
+      }
+    });
+
+    // Optional: flip back animation before navigating
+    links.forEach(link => {
+      link.addEventListener("click", (e) => {
+        const href = link.getAttribute("href");
+
+        // Flip all back first
+        links.forEach(l => l.classList.remove("active"));
+
+        // Add a brief delay for visual flip effect before page loads
+        if (!href.endsWith(".pdf")) { // don’t delay CV
+          e.preventDefault();
+          setTimeout(() => {
+            window.location.href = href;
+          }, 250);
+        }
+      });
+    });
+  });
+</script>
+
 </body>
 </html>
