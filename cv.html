@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ella Mattinen</title>
+  <title>Research - Ella Mattinen</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="icon" type="image/png" href="favicon.png" />
   <link rel="stylesheet" href="styles.css" />
@@ -14,30 +14,25 @@
       <h1>Ella Mattinen</h1>
       <p class="institution">Tampere University</p>
       <nav class="nav-links">
-        <a href="index.html" class="active">Home</a>
+        <a href="index.html">Home</a>
         <a href="cv.html" target="_blank">CV</a>
-        <a href="research.html" class="3">Research</a>
+        <a href="research.html" class="active">Research</a>
       </nav>
     </header>
-    
-    <div class="profile-section">
-      <img src="ella.jpg" alt="Ella Mattinen" class="photo" />
-      <div class="profile-text">
-        <a href="mailto:ella.mattinen@tuni.fi">ella.mattinen@tuni.fi</a></p>
-
-    <section>
-      <p>I am a third-year Economics PhD student at Tampere University. 
-      My research focuses on social insurance and taxation and their effects on individual and firm-level behavior. My research interest are public and labor economics.</p>
-      <p>My research is a part of the <a href="https://verotutkimus.fi/en/home/" target="_blank">Finnish Centre of Excellence in Tax Systems Research (FIT)</a>.</p>
-      <p>I am visiting UC Berkeley in the academic year 2025–2026, hosted by
-        <a href="https://eml.berkeley.edu/~saez/" target="_blank">Emmanuel Saez</a>.
-      </p>
-    </section>
 
 
+    <div class="cv-content">
+      <section class="cv-section">
+          <p> You can find my CV <a href="CV.pdf" target="_blank">here</a>.
+          </p>
+          <embed src="CV.pdf" type="application/pdf" width="100%" height="800px" />
+        </div>
 
+      </section>
+
+
+    </div>
   </main>
-
   <script>
   document.addEventListener("DOMContentLoaded", () => {
     const links = document.querySelectorAll(".nav-links a");
@@ -73,7 +68,5 @@
   });
 </script>
 
-
 </body>
 </html>
-
