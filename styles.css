@@ -181,6 +181,50 @@ a:not(.nav-links a):hover {
   font-size: 0.95em;
 }
 
+/* Abstract styles */
+.abstract-trigger {
+  cursor: pointer;
+  color: #111;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  margin-left: 2.9rem;
+  font-weight: bold;
+}
+
+.abstract-trigger::before {
+  content: "|";
+  color: #111;
+  margin-right: 0.5rem;
+  position: absolute;
+  left: -0.7rem;
+}
+
+.abstract-trigger::after {
+  content: "♥";
+  color: black;
+  margin-left: 0.3rem;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.abstract-trigger:hover::after {
+  opacity: 1;
+}
+
+.abstract-content {
+  display: none;
+  margin: 0.5rem 0;
+  padding-left: 2rem;
+  text-indent: 0;
+  background-color: #ffffff;
+}
+
+.abstract-content p {
+  padding-left: 0;
+  text-indent: 0;
+}
+
 /* CV Link*/
 .top p:last-child {
   margin-top: 6px;
@@ -208,6 +252,3 @@ a:not(.nav-links a):hover {
     font-size: 1.1rem;
   }
 }
-
-
-
