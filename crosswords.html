@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Research - Ella Mattinen</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="wrapper">
+    <header class="header-content">
+      <h1>Ella Mattinen</h1>
+      <p class="institution">Tampere University</p>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="cv.html" target="_blank">CV</a>
+        <a href="research.html" class="active">Research</a>
+        <a href="crosswords.html" class="active">Crosswords</a>
+      </nav>
+    </header>
+
+
+    <div class="crosswords-content">
+      <section class="crosswords-section">
+          <p>As a hobby, I like to make crosswords (or arrowword puzzles) from scratch. As I come up with the words as well as the hints, they may be more difficult for some, although most words are common. These puzzles are mostly in English, but I make some in Finnish as well. 
+          </p>
+
+          <p>Below are some basic rules/hints to help you get started: </p>
+
+          <ul class="crossword-rules">
+            <li>One letter per cell and words are usually written either from left to right or from up to down unless otherwise specified using an arrow.</li>
+            <li>Stars indicate relation to the bigger image (can be any word relating to it).</li>
+            <li>Some answers may not be words, but abbreviations or names etc.</li>
+            <li>A cell with a hint usually includes a hint for both the word on the right as well as a word for below unless there is no space for both.</li>
+            <li>Big arrows on hints indicate where the word goes and in which direction if not clear otherwise.</li>
+          </ul>
+
+          <p>Below you can find links to some puzzles and their answer keys. At the bottom of the page, the newest puzzle should be visible.</p>
+
+          <p>
+            <strong>Crossword 1:</strong> <a href="CROSSWORDS.pdf" target="_blank">Puzzle</a> and <a href="ANSWERS.pdf" target="_blank">Answerkey</a>.
+            <a href="https://docs.google.com/spreadsheets/d/1DL2pJrz9LO3GUGu1TXfovllYgZ-5j3Oysv08VQHF2EI/edit?usp=sharing" target="_blank">Here</a> is also a link to the google sheets if you wish to do it on the computer (please make a copy/duplicate of the sheet for yourself).
+          </p>
+
+          <embed src="CROSSWORDS.pdf" type="application/pdf" width="100%" height="800px" />
+        </div>
+
+      </section>
+
+
+    </div>
+  </main>
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const links = document.querySelectorAll(".nav-links a");
+    const current = window.location.pathname.split("/").pop();
+
+    // Reset and mark the current link as active
+    links.forEach(link => {
+      const href = link.getAttribute("href");
+      if (href === current) {
+        link.classList.add("active");
+      } else {
+        link.classList.remove("active");
+      }
+    });
+
+    // Optional: flip back animation before navigating
+    links.forEach(link => {
+      link.addEventListener("click", (e) => {
+        const href = link.getAttribute("href");
+
+        // Flip all back first
+        links.forEach(l => l.classList.remove("active"));
+
+        // Add a brief delay for visual flip effect before page loads
+        if (!href.endsWith(".pdf")) { // don’t delay pdf
+          e.preventDefault();
+          setTimeout(() => {
+            window.location.href = href;
+          }, 250);
+        }
+      });
+    });
+  });
+</script>
+
+</body>
+</html>

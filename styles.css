@@ -94,6 +94,16 @@ h1 {
   transform: translateY(-50%);
 }
 
+/* Crosswords link */
+.nav-links a[href="crosswords.html"]:not(.active):hover::after {
+  content: '🂤';
+  transform: translateY(-50%);
+}
+.nav-links a[href="crosswords.html"].active::after {
+  content: '🂤';
+  transform: translateY(-50%);
+}
+
 
 
 @keyframes cardFlip {
@@ -251,4 +261,22 @@ a:not(.nav-links a):hover {
   .institution {
     font-size: 1.1rem;
   }
+}
+
+/* Crosswords rules list: appear immediately after the preceding paragraph and shifted right */
+.crossword-rules {
+  margin-top: 0.25rem; /* minimal gap under the preceding sentence */
+  margin-left: 1.6rem; /* shift bullets a bit to the right */
+  padding-left: 0.25rem;
+  list-style-position: outside;
+}
+
+/* When the list follows a paragraph, reduce the top gap so it appears straight after the sentence */
+.crosswords-section p + .crossword-rules {
+  margin-top: 0.15rem;
+}
+
+/* Slightly tighten list item spacing for a compact look */
+.crossword-rules li {
+  margin-bottom: 0.45rem;
 }
