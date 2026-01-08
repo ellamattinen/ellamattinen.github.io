@@ -278,15 +278,65 @@ a:not(.nav-links a):hover {
 
 /* Crosswords rules list: appear immediately after the preceding paragraph and shifted right */
 .crossword-rules {
+  display: none; /* hidden by default; toggled open via JS */
   margin-top: 0.25rem; /* minimal gap under the preceding sentence */
   margin-left: 1.6rem; /* shift bullets a bit to the right */
   padding-left: 0.25rem;
   list-style-position: outside;
 }
 
+.crossword-rules.open {
+  display: block;
+}
+
+/* Rules toggle: match abstract trigger style (vertical bar, bold, heart on hover) */
+.rules-toggle {
+  cursor: pointer;
+  color: #111;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  margin-left: 1.5rem;
+  font-weight: bold;
+  background: transparent;
+  border: none;
+  padding: 0;
+  font-family: inherit;
+  font-size: inherit; /* match surrounding text size */
+}
+
+.rules-toggle::before {
+  content: "|";
+  color: #111;
+  margin-right: 0.5rem;
+  position: absolute;
+  left: -0.7rem;
+}
+
+.rules-toggle::after {
+  content: "♥";
+  color: black;
+  margin-left: 0.3rem;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.rules-toggle:hover::after {
+  opacity: 1;
+}
+
+/* Keep heart visible when rules are open */
+.rules-toggle.active::after {
+  opacity: 1;
+}
+
 /* When the list follows a paragraph, reduce the top gap so it appears straight after the sentence */
 .crosswords-section p + .crossword-rules {
   margin-top: 0.15rem;
+}
+
+.crossword-rules {
+  font-size: 0.95rem; /* slightly smaller than main text */
 }
 
 /* Slightly tighten list item spacing for a compact look */
