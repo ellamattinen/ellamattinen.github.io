@@ -135,6 +135,19 @@ h1 {
   flex-shrink: 0;
 }
 
+/* Left column for image + email */
+.profile-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-email {
+  margin-top: 0.5rem;
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
 h2 {
   font-size: 22px;
   margin-top: 40px;
